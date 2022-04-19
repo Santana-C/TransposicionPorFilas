@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransposicionPorFilas", "TransposicionPorFilas\TransposicionPorFilas.csproj", "{1528964E-9FB9-4A16-B3F6-5BEC81191987}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1528964E-9FB9-4A16-B3F6-5BEC81191987}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1528964E-9FB9-4A16-B3F6-5BEC81191987}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1528964E-9FB9-4A16-B3F6-5BEC81191987}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1528964E-9FB9-4A16-B3F6-5BEC81191987}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BED95A47-0DCF-4EA7-A96C-675E8B1E700A}
+	EndGlobalSection
+EndGlobal
