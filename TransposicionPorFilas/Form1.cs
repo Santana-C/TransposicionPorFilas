@@ -108,14 +108,24 @@ namespace TransposicionPorFilas {
         }
 
         private string Descifrar(string criptograma, int renglones, bool contieneClave) {
-            int columnas = criptograma.Length % renglones == 0 ? (criptograma.Length / renglones) : (criptograma.Length / renglones) + 1;
+            //Variables necesarias
+            int columnas;
+            if(contieneClave) {
+                columnas = ((criptograma.Length + renglones) % renglones) == 0
+                ? ((criptograma.Length + renglones) / renglones) : ((criptograma.Length + renglones) / renglones) + 1;
+            } else {
+                columnas = (criptograma.Length % renglones) == 0 ? (criptograma.Length / renglones) : (criptograma.Length / renglones) + 1;
+            }
             char[][] matriz = new char[renglones][];
             for(int i = 0; i < matriz.Length; i++) 
                 matriz[i] = new char[columnas];
             int indice = 0;
-
+            //Llenado de la matriz
+            string claveOrdenada = OrdenarClave(txtClave.Text.Trim());
             for(int i = 0; i < renglones; i++) {
-                for(int j = 0; j < columnas; j++) {
+                if(contieneClave)
+                    matriz[i][0] = claveOrdenada[i];
+                for(int j = contieneClave ? 1 : 0; j < columnas; j++) {
                     try {
                         matriz[i][j] = criptograma[indice];
                     } catch { matriz[i][j] = 'X'; }
